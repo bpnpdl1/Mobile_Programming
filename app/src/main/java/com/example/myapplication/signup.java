@@ -26,6 +26,8 @@ public class signup extends AppCompatActivity {
         } else if (item.getItemId() == R.id.logout) {
             Toast.makeText(this,"Logout Clicked",Toast.LENGTH_SHORT).show();
 
+
+
         }
         return super.onOptionsItemSelected(item);
     }
