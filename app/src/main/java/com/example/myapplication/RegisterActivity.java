@@ -15,41 +15,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class signup extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.setting) {
-            Toast.makeText(this,"Setting Clicked",Toast.LENGTH_SHORT).show();
-
-        } else if (item.getItemId() == R.id.logout) {
-            Toast.makeText(this,"Logout Clicked",Toast.LENGTH_SHORT).show();
-
-
-
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater menuInflater=getMenuInflater();
-        menuInflater.inflate(R.menu.main_menu,menu);
-        return true;
-
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_register);
 
 
 
-        Button btnsignup=findViewById(R.id.btnsignup);
+        Button btRegister=findViewById(R.id.btRegister);
 
         EditText etUsername=findViewById(R.id.etUsername);
         EditText etAddress=findViewById(R.id.etAddress);
@@ -59,18 +36,12 @@ public class signup extends AppCompatActivity {
         RadioButton rbMale =findViewById(R.id.rbMale);
         RadioButton rbFemale =findViewById(R.id.rbFemale);
 
-//        btnsignin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i=new Intent(signup.this,Signin.class);
-//                startActivity(i);
-//            }
-//        });
 
-        btnsignup.setOnClickListener(new View.OnClickListener() {
+
+        btRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(signup.this,ProfileActivity.class);
+                Intent i=new Intent(RegisterActivity.this,ShowActivity.class);
                 i.putExtra("Username",etUsername.getText().toString());
                 i.putExtra("Address",etAddress.getText().toString());
                 i.putExtra("Dob",etDob.getText().toString());

@@ -35,6 +35,7 @@ public class Signin extends AppCompatActivity {
 
         btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 Intent i=new Intent(Signin.this,HomeActivity.class);
                 i.putExtra("NAME",etusername.getText().toString());
